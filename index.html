@@ -16,19 +16,10 @@
   <!-- aos.css -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- style.css -->
-  <link href="./css.css" rel="stylesheet">
+  <link href="./css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <nav>
-      <li><a href="#">he11oWor1d!</a></li>
-      <li><a href="#timeline">aboutMe</a></li>
-      <li><a href="#course">myCourse</a></li>
-      <li><a href="#collections">myCollections</a></li>
-    </nav>
-  </header>
-
   <!-- enter animation start-->
   <section class="openingCover">
     <section class="welcome" style="letter-spacing: 10px;">Welcome!</section>
@@ -38,6 +29,33 @@
   </section>
   <!-- enter animation end -->
 
+  <!-- navbar start -->
+  <nav class="navbar navbar-expand-sm navbar-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-lg-0 mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="font-weight: 800;color: black;text-decoration: underline;">he11owor1d!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#timeline">aboutMe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#course">myCourse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#collections">myCollections</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar end -->
+
   <!-- content -->
   <dotlottie-player src="https://lottie.host/021bd8a2-017f-4785-97f0-8427adca4e23/Kh3tdWk93g.json"
     background="transparent" speed="1" style="width: 1000px; height: 1000px;" loop autoplay>
@@ -45,7 +63,6 @@
   <section class="section opening">
     <div class="main entrytyping">
       <div class="strings-word">
-        <br><br>
         <div id="typed-strings" class="text-center">
           <p style="font-weight: lighter;">WEB DEVELOPER <span style="color: #777;">/</span><br>FRONT-END DEVELOPER</p>
         </div>
@@ -190,9 +207,9 @@
           前端
         </div>
         <ul class="list-group list-group-flush">
-          <a href="https://wda.mackliu.com/s1120419/front-end/cafe.html" class="list-group-item">Cafe 點餐系統</a>
-          <a href="https://wda.mackliu.com/s1120419/front-end/weather.html" class="list-group-item">天氣預報 API</a>
-          <a href="#" class="list-group-item">個人網站</a>
+          <a href="../front-end/cafe.html" class="list-group-item">Cafe 點餐系統</a>
+          <a href="../front-end/weather.html" class="list-group-item">天氣預報 API</a>
+          <a href="../myWeb/index.html" class="list-group-item">個人網站</a>
         </ul>
       </div>
       <div class="card backend" style="width: 25vw;" data-aos="fade-up" data-aos-delay="1300">
@@ -200,9 +217,9 @@
           後端
         </div>
         <ul class="list-group list-group-flush">
-          <a href="https://wda.mackliu.com/s1120419/back-end/calendar.php" class="list-group-item">萬年曆</a>
-          <a href="https://wda.mackliu.com/s1120419/back-end/ajax/index.html" class="list-group-item">學校班級資料庫</a>
-          <a href="https://wda.mackliu.com/s1120419/ishot/index.php" class="list-group-item">全端風格網站</a>
+          <a href="../back-end/calendar.php" class="list-group-item">萬年曆</a>
+          <a href="../back-end/ajax/index.html" class="list-group-item">學校班級資料庫</a>
+          <a href="../ishot/index.php" class="list-group-item">全端風格網站</a>
         </ul>
       </div>
       <div class="card design" style="width: 25vw;" data-aos="fade-up-left" data-aos-delay="1600">
@@ -210,9 +227,9 @@
           設計
         </div>
         <ul class="list-group list-group-flush">
-          <a href="https://wda.mackliu.com/s1120419/design/animals.html" class="list-group-item">AI 製作 20 隻動物</a>
-          <a href="https://wda.mackliu.com/s1120419/img/Calendar2024.jpg" class="list-group-item">PS 製作龍年年曆</a>
-          <a href="https://wda.mackliu.com/s1120419/img/Travelpost.jpg" class="list-group-item">PS 製作旅遊 DM</a>
+          <a href="../design/animals.html" class="list-group-item">AI 製作 20 隻動物</a>
+          <a href="../img/Calendar2024.jpg" class="list-group-item">PS 製作龍年年曆</a>
+          <a href="../img/Travelpost.jpg" class="list-group-item">PS 製作旅遊 DM</a>
         </ul>
       </div>
     </div>
@@ -238,9 +255,9 @@
   <!-- jQuery.js -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js'></script>
   <!-- gsap.js -->
-  <script src="./gsap.js"></script>
-  <script src="./ScrollTrigger.js"></script>
-  <script src="./TextPlugin.js"></script>
+  <script src="./css/gsap.js"></script>
+  <script src="./css/ScrollTrigger.js"></script>
+  <script src="./css/TextPlugin.js"></script>
   <!-- rellax.js -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/rellax/1.12.1/rellax.min.js'></script>
   <!-- aos.js -->
@@ -262,7 +279,7 @@
 
     // 註冊 Rellax
     var rellax = new Rellax('.rellax', {
-      breakpoints: [576, 768, 1201],
+      breakpoints: [550, 768, 1201]
     });
 
     // header cover: website opening animation
