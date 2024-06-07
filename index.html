@@ -39,7 +39,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mb-lg-0 mx-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#" style="font-weight: 800;color: black;text-decoration: underline;">he11owor1d!</a>
+            <a class="nav-link" href="#"
+              style="font-weight: 800;color: black;text-decoration: underline;">he11owor1d!</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#timeline">aboutMe</a>
@@ -208,8 +209,10 @@
           前端
         </div>
         <ul class="list-group list-group-flush">
-          <a href="https://wda.mackliu.com/s1120419/front-end/cafe.html" class="list-group-item" target="_blank">Cafe 點餐系統</a>
-          <a href="https://wda.mackliu.com/s1120419/front-end/weather.html" class="list-group-item" target="_blank">天氣預報 API</a>
+          <a href="https://wda.mackliu.com/s1120419/front-end/cafe.html" class="list-group-item" target="_blank">Cafe
+            點餐系統</a>
+          <a href="https://wda.mackliu.com/s1120419/front-end/weather.html" class="list-group-item" target="_blank">天氣預報
+            API</a>
           <a href="https://he11owor1dtw.github.io/" class="list-group-item" target="_blank">個人網站</a>
         </ul>
       </div>
@@ -218,7 +221,8 @@
           後端
         </div>
         <ul class="list-group list-group-flush">
-          <a href="https://wda.mackliu.com/s1120419/back-end/calendar.php" class="list-group-item" target="_blank">萬年曆</a>
+          <a href="https://wda.mackliu.com/s1120419/back-end/calendar.php" class="list-group-item"
+            target="_blank">萬年曆</a>
           <a href="https://wda.mackliu.com/s1120419/back-end/ajax" class="list-group-item" target="_blank">學校班級資料庫</a>
           <a href="https://wda.mackliu.com/s1120419/ishot" class="list-group-item" target="_blank">全端風格網站</a>
         </ul>
@@ -228,9 +232,12 @@
           設計
         </div>
         <ul class="list-group list-group-flush">
-          <a href="https://wda.mackliu.com/s1120419/design/animals.html" class="list-group-item" target="_blank">AI 製作 20 隻動物</a>
-          <a href="https://wda.mackliu.com/s1120419/img/Calendar2024.jpg" class="list-group-item" target="_blank">PS 製作龍年年曆</a>
-          <a href="https://wda.mackliu.com/s1120419/img/Travelpost.jpg" class="list-group-item" target="_blank">PS 製作旅遊 DM</a>
+          <a href="https://wda.mackliu.com/s1120419/design/animals.html" class="list-group-item" target="_blank">AI 製作
+            20 隻動物</a>
+          <a href="https://wda.mackliu.com/s1120419/img/Calendar2024.jpg" class="list-group-item" target="_blank">PS
+            製作龍年年曆</a>
+          <a href="https://wda.mackliu.com/s1120419/img/Travelpost.jpg" class="list-group-item" target="_blank">PS 製作旅遊
+            DM</a>
         </ul>
       </div>
     </div>
@@ -265,180 +272,8 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- dotlottie.mjs -->
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
-  <script>
-
-    // 註冊 GSAP
-    gsap.registerPlugin(ScrollTrigger);
-    gsap.registerPlugin(TextPlugin);
-
-    // 註冊 AOS
-    AOS.init({
-      duration: 1000,
-      mirror: true,
-      easing: 'ease-out-quart',
-    });
-
-    // 註冊 Rellax
-    var rellax = new Rellax('.rellax', {
-      breakpoints: [550, 768, 1201]
-    });
-
-    // header cover: website opening animation
-    const loadingtl = gsap.timeline();
-
-    loadingtl
-      .to(".loadingValue", 2, { width: "100%" })
-      .to(".loadingBar", 0, { display: 'none' })
-      .to(".welcome", 0, { display: 'none' })
-      .to(".openingCover", 0.5, { height: 0 })
-
-    // entry typing effect
-    var typed = new Typed('#typed', {
-      stringsElement: '#typed-strings', // 定義標籤
-      backSpeed: 60, // 回播速度
-      typeSpeed: 50, // 打字速度
-      startDelay: 2700, // 2.5秒後觸發
-      loop: false, // 循環播放
-    });
-
-    // footer typing effect
-    gsap.to('.footertext', {
-      scrollTrigger: {
-        trigger: '.footertext',
-        start: '60% 90%',
-        end: 'top 60%',
-        toggleActions: 'play none none reset',
-        // markers:true,
-      },
-      duration: 3.5,
-      text: "Let’s see what will happen in the future.",
-      ease: "power1.out",
-    });
-
-    const scrollDownText = gsap.fromTo('.scrollDown', {
-      text: '<i class="fa-solid fa-chevron-down"></i>',
-    }, {
-      ease: "power1.out",
-      y: 25,
-      repeat: -1,
-      repeatDelay: 0.5,
-    });
-
-    const tweenscrollDown = gsap.to('.scrollDown', {
-      scrollTrigger: {
-        trigger: '.scrollDown',
-        start: 'top 90%',
-        end: 'top 60%',
-        toggleActions: 'play none none reset',
-        /*
-        值可為 play,pause,resume,reverse,restart,reset,complete,none
-        onEnter => 第一次綠碰綠 scroller-start 碰到 start
-        onLeave => 第一次紅碰紅 scroller-end 碰到 end
-        onEnterBack => 往回時紅碰紅 scroller-end 碰到 end
-        onEnterBack => 往回時綠碰綠 scroller-start 碰到 start
-        */
-        // markers: true,
-      },
-      duration: 0.3,
-      opacity: 0,
-      ease: 'power2.in'
-    })
-
-    const tweenborn = gsap.to('.born', {
-      scrollTrigger: {
-        trigger: '.born',
-        start: 'top 90%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reset',
-      },
-      x: '0%',
-      duration: 1.5,
-      ease: 'power2.out'
-    })
-
-    const tweenedu = gsap.to('.education', {
-      scrollTrigger: {
-        trigger: '.education',
-        start: 'top 90%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reset',
-        // markers: true,
-      },
-      x: '0%',
-      duration: 1.5,
-      ease: 'power2.out'
-    })
-
-    const tweenwork = gsap.to('.work', {
-      scrollTrigger: {
-        trigger: '.work',
-        start: 'top 90%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reset',
-        // markers: true,
-      },
-      x: '0%',
-      duration: 1.5,
-      ease: 'power2.out'
-    })
-
-    const tweencovid = gsap.to('.covid', {
-      scrollTrigger: {
-        trigger: '.covid',
-        start: 'top 90%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reset',
-        // markers: true,
-      },
-      x: '0%',
-      duration: 1.5,
-      ease: 'power2.out'
-    })
-
-    const tweenuntil = gsap.to('.tillnow', {
-      scrollTrigger: {
-        trigger: '.tillnow',
-        start: 'top 90%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reset',
-        // markers: true,
-      },
-      x: '0%',
-      duration: 1.5,
-      ease: 'power2.out'
-    })
-
-    // getSkills typing effect
-    gsap.to('.getSkills', {
-      scrollTrigger: {
-        trigger: '.getSkills',
-        start: 'top 90%',
-        end: 'bottom 50%',
-        toggleActions: 'play none none reset',
-        // markers: true,
-      },
-      duration: 1.5,
-      text: "900個小時的課程<br>我得到了這些",
-      ease: "slow",
-      repeat: 0
-    });
-
-    // myCollections typing effect
-    gsap.to('.myCollections', {
-      scrollTrigger: {
-        trigger: '.myCollections',
-        start: 'top 90%',
-        end: 'bottom 50%',
-        toggleActions: 'play none none reset',
-        // markers: true,
-      },
-      duration: 2,
-      text: "六個月的日子<br>我做出了這些<br>",
-      ease: "slow",
-      repeat: 0
-    });
-
-  </script>
+  <!-- js 代碼 -->
+  <script src="./css/main.js"></script>
 </body>
 
 </html>
