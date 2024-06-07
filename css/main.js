@@ -165,7 +165,7 @@
       // markers: true,
     },
     duration: 2,
-    text: "六個月的日子<br>我做出了這些<br>",
+    text: "開始到現在<br>我做出了這些<br>",
       ease: "slow",
       repeat: 0
   });
